@@ -53,3 +53,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Project Link: [https://github.com/disalad/todo-app](https://github.com/disalad/todo-app)
+# todo-app-with-nextjs-and-prisma
