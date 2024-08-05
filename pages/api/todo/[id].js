@@ -3,11 +3,8 @@ import { db } from '../../../lib/db';
 export default async function Handler(req, res) {
     try {
         if (req.method === 'PATCH') {
-            // const updatedTodo = await Todo.findByIdAndUpdate(
-            //     req.query.id,
-            //     { $set: req.body },
-            //     { new: true },
-            // );
+    console.log("req.query.id",req.query.id,req.body);
+    
             const updatedTodo = await db.todo.update({
                 where: {
                   id: req.query.id,
@@ -20,7 +17,7 @@ export default async function Handler(req, res) {
               
             res.status(201).json({ message: 'Todo updated', updatedTodo });
         } else if (req.method === 'DELETE') {
-            // await connectDb();
+           
             const id=req.query.id
             console.log("idmm",req);
             

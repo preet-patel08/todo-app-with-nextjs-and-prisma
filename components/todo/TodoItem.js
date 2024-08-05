@@ -8,10 +8,13 @@ import axios from 'axios';
 function TodoItem({ content, _id, important, isCompleted }) {
     const [starChecked, setStarChecked] = useState(important);
     const [taskDone, setTaskDone] = useState(isCompleted);
+console.log("in item",_id);
 
     const setMarkAsImportantHandler = async ev => {
         const todoElement = ev.currentTarget.parentElement.parentElement;
         const taskId = todoElement.getAttribute('data-id');
+        console.log("_id",_id);
+        
         try {
             const response = await axios({
                 method: 'PATCH',
@@ -22,7 +25,7 @@ function TodoItem({ content, _id, important, isCompleted }) {
             console.log('Task Marked as important: ', taskId);
             console.log(response);
         } catch (err) {
-            console.error(err.message);
+    console.error(err.message);
         }
     };
 

@@ -11,6 +11,8 @@ function TodoList({ todos }) {
             </section>
         );
     }
+    console.log("_id",todos);
+    
     return (
         <section>
             {todos.map(todo => (

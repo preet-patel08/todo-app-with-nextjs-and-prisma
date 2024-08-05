@@ -18,7 +18,7 @@ function Home({ todos }) {
                     {
                         ...response.data.todo,
                         content:response.data.todo.title,
-                        id: response.data.todo.id.toString(),
+                        _id: response.data.todo.id.toString(),
                     },
                 ]);
             } catch (err) {
